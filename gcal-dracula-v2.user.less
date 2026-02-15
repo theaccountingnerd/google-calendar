@@ -5,11 +5,15 @@
 @description    A dark theme for Google Calendar
 @author         accountingnerd [(https://github.com/accountingnerd)]
 @author         WalkBackQuack [(https://github.com/WalkQuackBack)]
-@homepageURL	https://github.com/dracula/google-calendar
+@homepageURL    https://github.com/dracula/google-calendar
+@updateURL      https://github.com/theaccountingnerd/google-calendar/raw/refs/heads/gcal-dracula-v2.0.0/gcal-dracula-v2.user.less
 @license MIT
 
 @preprocessor less
-@select dracula Dracula Version ["dracula:Default" "alucard:Alucard"]
+@advanced select theme "Dracula Version" {
+    dracula "Dracula (Default)" <<<EOT dracula EOT >>>
+    alucard "Alucard (Light)"   <<<EOT alucard EOT >>>
+}
 ==/UserStyle== */
 
 @import "https://raw.githubusercontent.com/theaccountingnerd/google-calendar/refs/heads/gcal-dracula-v2.0.0/lib/lib.less";
