@@ -9,6 +9,7 @@
 @license MIT
 
 @preprocessor less
+@select dracula Dracula Version ["dracula:Default" "alucard:Alucard"]
 ==/UserStyle== */
 
 @import "https://raw.githubusercontent.com/theaccountingnerd/google-calendar/refs/heads/gcal-dracula-v2.0.0/lib/lib.less";
@@ -17,22 +18,22 @@
 @-moz-document domain("calendar.google.com") {
   // Initial load, before JS init
   .DO879e.PC2yOb {
-    #catppuccin(@alucard);
+    #dracula(@alucard);
   }
   @media (prefers-color-scheme: dark) {
     .DO879e.PC2yOb {
-      #catppuccin(@dracula);
+      #dracula(@dracula);
     }
   }
 
   .DO879e:not(.PC2yOb).CcsDpe {
-    #catppuccin(@dracula);
+    #dracula(@dracula);
   }
   .DO879e:not(.PC2yOb):not(.CcsDpe) {
-    #catppuccin(@alucard);
+    #dracula(@alucard);
   }
 
-  #catppuccin(@flavor) {
+  #dracula(@flavor) {
     #lib.palette();
     #lib.defaults();
 
