@@ -9,20 +9,19 @@
 @license MIT
 
 @preprocessor less
-@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
-@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
-@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+
+@var select alucard "Alucard" ["standard:Standard Light"]
+@var select dracula "Dracula" ["standard:Standard Dark"]
 ==/UserStyle== */
 
-@import "https://userstyles.catppuccin.com/lib/lib.less";
+@import "https://github.com/theaccountingnerd/google-calendar/blob/gcal-dracula-v2.0.0/lib/lib.less";
 
-// @import "https://userstyles.catppuccin.com/lib/m3.less";
 @import "https://github.com/catppuccin/userstyles/raw/refs/heads/feat/m3-lib/lib/m3.less";
 
 @-moz-document domain("calendar.google.com") {
   // Initial load, before JS init
   .DO879e.PC2yOb {
-    #catppuccin(@lightFlavor);
+    #catppuccin(@alucard);
   }
   @media (prefers-color-scheme: dark) {
     .DO879e.PC2yOb {
@@ -34,7 +33,7 @@
     #catppuccin(@darkFlavor);
   }
   .DO879e:not(.PC2yOb):not(.CcsDpe) {
-    #catppuccin(@lightFlavor);
+    #catppuccin(@alucard);
   }
 
   #catppuccin(@flavor) {
